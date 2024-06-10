@@ -24,7 +24,7 @@ sp = Spotify(auth_manager=SpotifyClientCredentials(client_id=SPOTIFY_CLIENT_ID, 
 app = Flask(__name__)
 
 
-def get_track_info(track_id) -> dict[str, str]:
+def get_track_info(track_id):
     track_info = sp.track(track_id)
     return {
         "title": track_info.get("name"),
